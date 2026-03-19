@@ -25,7 +25,7 @@ def main() -> None:
         while deck.get_deck_stats()["total_cards"] > 0:
             first_card = deck.draw_card()
             print(f"\nDrew: {first_card.name} "
-                  f"({type(first_card).__name__.replace("Card", "")})")
+                  f"({type(first_card).__name__.replace('Card', '')})")
             print(f"Play result: {first_card.play({})}")
 
     except IndexError as e:

@@ -17,8 +17,8 @@ def main() -> None:
     print(f"Available types: {game_engine.factory.get_supported_types()}")
     print("\nSimulating aggressive turn...")
     action_result = game_engine.simulate_turn()
-    print(f"Hand: {[f"{card.name} ({card.cost})"
-                    for card in game_engine.hand]}")
+    hand = [f"{card.name} ({card.cost})" for card in game_engine.hand]
+    print(f"Hand: {hand}")
     print("\nTurn execution:")
     print(f"Strategy: {game_engine.strategy.get_strategy_name()}")
     print(f"Actions: {action_result}")
